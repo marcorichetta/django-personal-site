@@ -4,7 +4,7 @@ from .models import Post, Tag
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ("title", "created_at", "published")
+    list_display = ("title", "slug", "created_at", "published")
     list_filter = ("published",)
     prepopulated_fields = {"slug": ("title",)}
     search_fields = ("title", "content")

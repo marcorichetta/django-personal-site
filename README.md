@@ -17,3 +17,8 @@ Este es un blog hecho con Django. La idea es poder meter cosas acá e ir extendi
 ## Setup
 
 1. uv sync
+
+## Deploy
+
+-   https://render.com/docs/deploy-django
+-   https://github.com/django-simple-deploy/django-simple-deploy

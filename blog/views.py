@@ -4,14 +4,18 @@ from .models import Post
 # Create your views here.
 
 
-def index(request):
-    posts = Post.objects.filter(published=True).all()
-
-    return render(request, "index.html", {"posts": posts})
+def home(request):
+    posts = Post.objects.filter().all()
+    print(posts)
+    return render(request, "home.html", {"posts": posts})
 
 
 def about(request):
-    return render(request, "about.html")
+    post = Post.objects.get(slug="about-me")
+    if not post:
+        return render(request, "404.html")
+
+    return render(request, "about.html", {"post": post})
 
 
 def contact(request):
