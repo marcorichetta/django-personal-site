@@ -39,9 +39,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "accounts",
+    # 3rd party apps
+    "debug_toolbar",
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -127,3 +130,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Custom settings
 
 AUTH_USER_MODEL = "accounts.CustomUser"
+
+# Debug Toolbar settings
+INTERNAL_IPS = [
+    "127.0.0.1",
+]

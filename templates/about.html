@@ -1,14 +1,23 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
+{% block title %}About Me{% endblock %}
 
-{% block page_title %}
-<h1>{{ post.title }}</h1>
-{% endblock page_title %}
+{% block content %}
+<h1>About Me</h1>
+<p>I'm a nerd from Córdoba, Argentina.
 
+    I specialize in web development, primarily using Python/Django, but I am also proficient with Flask and FastAPI.
+    Additionally, I also have solid experience with JavaScript, React as well as in DevOps practices such as GitOps with
+    FluxCD. ^d1af28
 
-{% block page_content %}
+    Sharing knowledge is something I’m passionate about, which is why I try to give talks, write posts, or contribute to
+    open-source projects. For example:
+    - Translation of Python documentation - https://github.com/python/python-docs-es/
+    - Django official forum - https://forum.djangoproject.com/u/marcorichetta/summary
+    - Nerdearla - Intro a GitOps - https://www.youtube.com/live/EWofHnNngoc?si=9rkvYuxCOo-MucXp
 
-<p>Created: {{ post.created_at }}</p>
-{{ post.content_md }}
+    I’m also interested in topics like Infrastructure as Code, MLOps, Documentation, Testing, and Functional
+    Programming.</p>
 
-{% endblock page_content %}
+<p>On a more personal side, I like to play bass and guitar.</p>
+{% endblock %}

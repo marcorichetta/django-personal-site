@@ -8,3 +8,8 @@ dependencies = [
     "django>=5.1.4",
     "markdown>=3.7",
 ]
+
+[dependency-groups]
+dev = [
+    "django-debug-toolbar>=5.2.0",
+]

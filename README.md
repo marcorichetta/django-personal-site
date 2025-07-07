@@ -7,6 +7,8 @@ Este es un blog hecho con Django. La idea es poder meter cosas acá e ir extendi
 -   Django
 -   HTMX
 -   django-template-partials
+-   https://django-tailwind.readthedocs.io/en/latest/installation.html
+-   https://django-htmx.readthedocs.io/en/latest/installation.html
 
 # Inspiración
 

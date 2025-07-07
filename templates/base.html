@@ -1,27 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-
-    <title>My Personal Blog</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Personal Site{% endblock %}</title>
+    <link rel="stylesheet" href="https://andybrewer.github.io/mvp/mvp.css">
 </head>
-
 <body>
-
-    <h1>My Personal Blog</h1>
-
-    <a href="{% url 'blog_index' %}">Home</a>
-
-    <hr>
-
-    {% block page_title %}{% endblock page_title %}
-
-    {% block page_content %}{% endblock page_content %}
-
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About Me</a>
+            <a href="/blog">Blog</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
 </body>
-
 </html>
