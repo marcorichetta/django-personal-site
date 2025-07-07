@@ -20,6 +20,7 @@ class PostAdmin(admin.ModelAdmin):
         "published",
     )
     filter_horizontal = ("tags",)
+    raw_id_fields = ("tags",)
 
 
 @admin.register(Tag)

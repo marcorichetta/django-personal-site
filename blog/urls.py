@@ -5,8 +5,6 @@ from .feed import BlogFeed
 
 urlpatterns = [
     path("", views.home, name="blog_index"),
-    path("about/", views.about, name="about"),
-    path("contact/", views.contact, name="contact"),
-    path("blog/", views.blog, name="blog"),
     path("feed/", BlogFeed()),
+    path("<int:year>/<slug:slug>/", views.post, name="post"),
 ]

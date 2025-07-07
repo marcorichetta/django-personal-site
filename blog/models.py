@@ -43,7 +43,7 @@ class Post(models.Model):
         if self.summary:
             return strip_tags(
                 markdown.markdown(
-                    self.summary, extensions=["fenced_code"], output_format="html5"
+                    self.summary, extensions=["fenced_code"], output_format="html"
                 )
             )
 
@@ -51,6 +51,6 @@ class Post(models.Model):
     def content_md(self):
         return mark_safe(
             markdown.markdown(
-                self.content, extensions=["fenced_code"], output_format="html5"
+                self.content, extensions=["fenced_code"], output_format="html"
             )
         )
