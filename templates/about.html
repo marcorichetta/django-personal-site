@@ -3,21 +3,55 @@
 {% block title %}About Me{% endblock %}
 
 {% block content %}
-<h1>About Me</h1>
-<p>I'm a nerd from Córdoba, Argentina.
+<div class="max-w-2xl mx-auto">
+    <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-stone-900">About Me</h1>
+        <p class="mt-3 text-xl text-stone-600">I'm a nerd from Córdoba, Argentina.</p>
+    </header>
 
-    I specialize in web development, primarily using Python/Django, but I am also proficient with Flask and FastAPI.
-    Additionally, I also have solid experience with JavaScript, React as well as in DevOps practices such as GitOps with
-    FluxCD. ^d1af28
+    <div class="prose prose-stone prose-lg mx-auto">
+        <p>I've been working as a software developer since 2016, and I love sharing knowledge through talks and
+            writing.</p>
 
-    Sharing knowledge is something I’m passionate about, which is why I try to give talks, write posts, or contribute to
-    open-source projects. For example:
-    - Translation of Python documentation - https://github.com/python/python-docs-es/
-    - Django official forum - https://forum.djangoproject.com/u/marcorichetta/summary
-    - Nerdearla - Intro a GitOps - https://www.youtube.com/live/EWofHnNngoc?si=9rkvYuxCOo-MucXp
+        <p>
+            I specialize in web development, primarily using <strong>Python/Django</strong>, but I am also
+            proficient with <strong>Flask</strong> and <strong>FastAPI</strong>. Additionally, I have solid experience
+            with JavaScript, <strong>React</strong>, as well as DevOps practices such as <strong>GitOps with
+                FluxCD</strong>.
+        </p>
 
-    I’m also interested in topics like Infrastructure as Code, MLOps, Documentation, Testing, and Functional
-    Programming.</p>
+        <p>Sharing knowledge is something I'm passionate about, which is why I try to give talks, write posts, or
+            contribute to open-source projects.</p>
 
-<p>On a more personal side, I like to play bass and guitar.</p>
+        <section class="bg-stone-100 rounded-lg p-6 my-8 not-prose">
+            <h3 class="text-xl font-semibold text-stone-900 mb-4">Selected Contributions</h3>
+            <ul class="space-y-3 text-stone-700">
+                <li>
+                    <span class="font-medium">Translation of Python documentation</span> —
+                    <a href="https://github.com/python/python-docs-es/" target="_blank"
+                        class="text-indigo-600 hover:text-indigo-800">github.com/python/python-docs-es</a>
+                </li>
+                <li>
+                    <span class="font-medium">Django official forum</span> —
+                    <a href="https://forum.djangoproject.com/u/marcorichetta/summary" target="_blank"
+                        class="text-indigo-600 hover:text-indigo-800">forum.djangoproject.com</a>
+                </li>
+                <li>
+                    <span class="font-medium">Nerdearla - Intro a GitOps</span> —
+                    <a href="https://www.youtube.com/live/EWofHnNngoc?si=9rkvYuxCOo-MucXp" target="_blank"
+                        class="text-indigo-600 hover:text-indigo-800">YouTube</a>
+                </li>
+            </ul>
+        </section>
+
+        <p>I'm also interested in topics like Infrastructure as Code, MLOps, Documentation, Testing, and Functional
+            Programming.</p>
+
+        <blockquote class="border-l-4 border-stone-300 pl-6 italic text-stone-600 my-8">
+            Solving problems with code and helping people are two things I really enjoy and with open source, I've
+            found the best of both worlds. I like seeing that what I do makes people's daily lives a little bit better.
+            <footer class="text-sm text-stone-500 mt-2 not-italic">— Marco Richetta</footer>
+        </blockquote>
+    </div>
+</div>
 {% endblock %}

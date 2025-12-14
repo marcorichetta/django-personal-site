@@ -1,15 +1,17 @@
 [project]
 name = "django-personal-site"
 version = "0.1.0"
-description = "Add your description here"
+description = "Marco Richetta's personal website"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "dj-database-url>=3.0.1",
     "django>=5.1.4",
+    "django-tailwind[cookiecutter,honcho,reload]>=4.4.1",
     "gunicorn>=23.0.0",
     "markdown>=3.7",
     "psycopg2-binary>=2.9.10",
+    "psycopg[binary,pool]>=3.2.9",
     "uvicorn>=0.35.0",
     "whitenoise[brotli]>=6.9.0",
 ]
@@ -17,4 +19,5 @@ dependencies = [
 [dependency-groups]
 dev = [
     "django-debug-toolbar>=5.2.0",
+    "django-extensions>=4.1",
 ]

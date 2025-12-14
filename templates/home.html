@@ -1,8 +1,282 @@
 {% extends "base.html" %}
-
-{% block title %}Home{% endblock %}
+{% load static %}
+{% block title %}Marco Richetta - Developer & Speaker{% endblock %}
 
 {% block content %}
-    <h1>Welcome to my personal site!</h1>
-    <p>This is the home page.</p>
+<main class="max-w-4xl mx-auto px-4 py-8 space-y-10">
+    <!-- Perfil principal -->
+    <section class="flex flex-col md:flex-row items-center gap-8">
+        <img src="{% static 'wizard.webp' %}" alt="Marco Richetta"
+            class="w-36 h-36 rounded-full object-cover border-2 border-blue-500 shadow-lg">
+        <div>
+            <h1 class="text-4xl font-bold mb-2">Marco Richetta</h1>
+            <h2 class="text-xl text-gray-700 mb-2">Software nerd · Public Speaker · Python Lover · Bass player</h2>
+            <p class="italic text-blue-600 mb-2">Making the world a better place with software since 2016</p>
+            <div class="flex gap-4 mt-4">
+                <a href="https://linkedin.com/in/marco-richetta" target="_blank" class="hover:scale-110 transition">
+                    <!-- LinkedIn SVG -->
+                    <svg width="24" height="24" fill="none" viewBox="0 0 256 256">
+                        <g>
+                            <path
+                                d="M218.123122,218.127392 L180.191928,218.127392 L180.191928,158.724263 C180.191928,144.559023 179.939053,126.323993 160.463756,126.323993 C140.707926,126.323993 137.685284,141.757585 137.685284,157.692986 L137.685284,218.123441 L99.7540894,218.123441 L99.7540894,95.9665207 L136.168036,95.9665207 L136.168036,112.660562 L136.677736,112.660562 C144.102746,99.9650027 157.908637,92.3824528 172.605689,92.9280076 C211.050535,92.9280076 218.138927,118.216023 218.138927,151.114151 L218.123122,218.127392 Z M56.9550587,79.2685282 C44.7981969,79.2707099 34.9413443,69.4171797 34.9391618,57.260052 C34.93698,45.1029244 44.7902948,35.2458562 56.9471566,35.2436736 C69.1040185,35.2414916 78.9608713,45.0950217 78.963054,57.2521493 C78.9641017,63.090208 76.6459976,68.6895714 72.5186979,72.8184433 C68.3913982,76.9473153 62.7929898,79.26748 56.9550587,79.2685282 M75.9206558,218.127392 L37.94995,218.127392 L37.94995,95.9665207 L75.9206558,95.9665207 L75.9206558,218.127392 Z M237.033403,0.0182577091 L18.8895249,0.0182577091 C8.57959469,-0.0980923971 0.124827038,8.16056231 -0.001,18.4706066 L-0.001,237.524091 C0.120519052,247.839103 8.57460631,256.105934 18.8895249,255.9977 L237.033403,255.9977 C247.368728,256.125818 255.855922,247.859464 255.999,237.524091 L255.999,18.4548016 C255.851624,8.12438979 247.363742,-0.133792868 237.033403,0.000790807055"
+                                fill="#0A66C2" />
+                        </g>
+                    </svg>
+                </a>
+                <a href="https://github.com/marcorichetta" target="_blank" class="hover:scale-110 transition">
+                    <!-- GitHub SVG -->
+                    <svg width="24" height="24" fill="none" viewBox="0 0 256 250">
+                        <g>
+                            <path
+                                d="M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z"
+                                fill="#161614" />
+                        </g>
+                    </svg>
+                </a>
+                <a href="https://bsky.app/profile/marcorichetta.bsky.social" target="_blank"
+                    class="hover:scale-110 transition">
+                    <!-- Bluesky SVG -->
+                    <svg width="24" height="24" fill="none" viewBox="0 0 256 226">
+                        <g>
+                            <path
+                                d="M55.4911549,15.1724797 C84.8410141,37.2065079 116.408338,81.8843671 128,105.858226 C139.591662,81.8843671 171.158986,37.2065079 200.508845,15.1724797 C221.686085,-0.726562511 256,-13.0280836 256,26.1164797 C256,33.9343952 251.517746,91.7899445 248.888789,101.183522 C239.750761,133.838395 206.452732,142.167409 176.832451,137.126283 C228.607099,145.938001 241.777577,175.125607 213.333183,204.313212 C159.311775,259.746226 135.689465,190.40493 129.636507,172.637268 C128.526873,169.380029 128.007662,167.856198 128,169.151973 C127.992338,167.856198 127.473127,169.380029 126.363493,172.637268 C120.310535,190.40493 96.6882254,259.746226 42.6668169,204.313212 C14.2224225,175.125607 27.3929014,145.938001 79.1675493,137.126283 C49.5472676,142.167409 16.2492394,133.838395 7.11121127,101.183522 C4.48225352,91.7899445 0,33.9343952 0,26.1164797 C0,-13.0280836 34.3139155,-0.726562511 55.4911549,15.1724797 Z"
+                                fill="#1185FE" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intereses destacados -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Libros / Goodreads -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+            <h2 class="text-2xl font-semibold mb-2">Books I'm reading</h2>
+            <p class="mb-2 text-gray-600">I love reading and sharing my favorite books.</p>
+            <!-- Goodreads widget -->
+            <style type="text/css" media="screen">
+                .gr_grid_container {
+                    /* customize grid container div here. eg: width: 500px; */
+                }
+
+                .gr_grid_book_container {
+                    /* customize book cover container div here */
+                    float: left;
+                    width: 39px;
+                    height: 60px;
+                    padding: 0px 0px;
+                    overflow: hidden;
+                }
+            </style>
+            <div id="gr_grid_widget_1763727424">
+                <!-- Show static html as a placeholder in case js is not enabled - javascript include will override this if things work -->
+                <h2>
+                    <a style="text-decoration: none;" rel="nofollow"
+                        href="https://www.goodreads.com/review/list/85136018-marco-richetta?shelf=read&utm_medium=api&utm_source=grid_widget">Marco's
+                        books</a>
+                </h2>
+                <div class="gr_grid_container">
+                    <div class="gr_grid_book_container"><a title="De La Pampa a los Estados Unidos" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/4471093-de-la-pampa-a-los-estados-unidos"><img
+                                alt="De La Pampa a los Estados Unidos" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1381961976l/4471093._SX50_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a title="El hechizo del verano" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/200507373-el-hechizo-del-verano"><img
+                                alt="El hechizo del verano" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1700216742l/200507373._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a title="The Psychology of Money" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/51181015-the-psychology-of-money"><img
+                                alt="The Psychology of Money" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1581443441l/51181015._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="Pensar con otros: una guía de supervivencia en tiempos de posverdad" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/45164162-pensar-con-otros"><img
+                                alt="Pensar con otros: una guía de supervivencia en tiempos de posverdad" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1555548112l/45164162._SX50_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a title="Zero to One: Notes on Startups, or How to Build th"
+                            rel="nofollow" href="https://www.goodreads.com/book/show/22856316-zero-to-one"><img
+                                alt="Zero to One: Notes on Startups, or How to Build th" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1414348710l/22856316._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a title="Un mundo feliz" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/3234782-un-mundo-feliz"><img alt="Un mundo feliz"
+                                border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546726871l/3234782._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="The Startup of You: Adapt to the Future, Invest in Yourself, and Transform Your Career"
+                            rel="nofollow" href="https://www.goodreads.com/book/show/12030438-the-startup-of-you"><img
+                                alt="The Startup of You: Adapt to the Future, Invest in Yourself, and Transform Your Career"
+                                border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328301968l/12030438._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a title="El viejo y el mar" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/3284191-el-viejo-y-el-mar"><img
+                                alt="El viejo y el mar" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1408408108l/3284191._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a title="Fahrenheit 451" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/17972675-fahrenheit-451"><img alt="Fahrenheit 451"
+                                border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1369335138l/17972675._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a title="Rebelión en la granja" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/147483.Rebeli_n_en_la_granja"><img
+                                alt="Rebelión en la granja" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1172187051l/147483._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="Code: The Hidden Language of Computer Hardware and Software" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/13020367-code"><img
+                                alt="Code: The Hidden Language of Computer Hardware and Software" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328323932l/13020367._SX50_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban"><img
+                                alt="Harry Potter and the Prisoner of Azkaban" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630547330l/5._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="Harry Potter and the Order of the Phoenix (Harry Potter, #5)" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix"><img
+                                alt="Harry Potter and the Order of the Phoenix" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546910265l/2._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="Harry Potter and the Goblet of Fire (Harry Potter, #4)" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire"><img
+                                alt="Harry Potter and the Goblet of Fire" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1554006152l/6._SX50_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="Harry Potter and the Deathly Hallows (Harry Potter, #7)" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows"><img
+                                alt="Harry Potter and the Deathly Hallows" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1663805647l/136251._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="Harry Potter and the Half-Blood Prince (Harry Potter, #6)" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince"><img
+                                alt="Harry Potter and the Half-Blood Prince" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1587697303l/1._SX50_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="Harry Potter and the Sorcerer's Stone (Harry Potter, #1)" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone"><img
+                                alt="Harry Potter and the Sorcerer's Stone" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474154022l/3._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="Harry Potter and the Chamber of Secrets (Harry Potter, #2)" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets"><img
+                                alt="Harry Potter and the Chamber of Secrets" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474169725l/15881._SY75_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="Eloquent JavaScript: A Modern Introduction to Programming" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/39866497-eloquent-javascript"><img
+                                alt="Eloquent JavaScript: A Modern Introduction to Programming" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1523918363l/39866497._SX50_.jpg" /></a>
+                    </div>
+                    <div class="gr_grid_book_container"><a
+                            title="The Demon-Haunted World: Science as a Candle in the Dark" rel="nofollow"
+                            href="https://www.goodreads.com/book/show/17349.The_Demon_Haunted_World"><img
+                                alt="The Demon-Haunted World: Science as a Candle in the Dark" border="0"
+                                src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553691804l/17349._SX50_.jpg" /></a>
+                    </div>
+                    <br style="clear: both" /><br /><a class="gr_grid_branding"
+                        style="font-size: .9em; color: #382110; text-decoration: none; float: right; clear: both"
+                        rel="nofollow" href="https://www.goodreads.com/user/show/85136018-marco-richetta">Marco
+                        Richetta's favorite books »</a>
+                    <noscript><br />Share <a rel="nofollow" href="/">book reviews</a> and ratings with Marco, and even
+                        join a <a rel="nofollow" href="/group">book club</a> on Goodreads.</noscript>
+                </div>
+
+            </div>
+            <script
+                src="https://www.goodreads.com/review/grid_widget/85136018?cover_size=&hide_link=&hide_title=&num_books=20&order=&shelf=&sort=&widget_id=1763727424"
+                type="text/javascript" charset="utf-8"></script>
+
+        </div>
+
+        <!-- Películas / JustWatch -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+            <h2 class="text-2xl font-semibold mb-2">What I'm watching</h2>
+            <p class="mb-2 text-gray-600">Movies & series I'm enjoying lately.</p>
+            <!-- JustWatch widget (ejemplo: trending) -->
+            <iframe src="https://widget.justwatch.com/us/trending?language=en" width="300" height="400" frameborder="0"
+                class="rounded"></iframe>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Música -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+            <h2 class="text-2xl font-semibold mb-2">Music I love</h2>
+            <p class="mb-2 text-gray-600">Bass player & music enthusiast.</p>
+            <!-- Ejemplo: Spotify embed (puedes cambiar el link por tu playlist) -->
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" width="300"
+                height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                loading="lazy"></iframe>
+        </div>
+
+        <!-- Conferencias / Sessionize -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+            <h2 class="text-2xl font-semibold mb-2">Talks & Conferences</h2>
+            <p class="mb-2 text-gray-600">I love sharing knowledge through talks.</p>
+            <script type="text/javascript"
+                src="https://sessionize.com/api/speaker/sessions/bvtexdrdm8/0x0x3fb393x"></script>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+        <h2 class="text-2xl font-semibold mb-2">Blog</h2>
+        <p class="mb-2 text-gray-600">Read my latest posts at
+            <a href="https://blog.marcorichetta.dev" target="_blank" rel="noopener"
+                class="text-blue-600 underline">blog.marcorichetta.dev</a>
+        </p>
+    </section>
+
+    <!-- Book a meeting -->
+    <section class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+        <h2 class="text-2xl font-semibold mb-2">Book a meeting with me</h2>
+        <p class="mb-2 text-gray-600">If you want to discuss a project, collaboration, or just have a chat, feel free to
+            book a meeting with me.</p>
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+            (function () {
+                var target = document.currentScript;
+                window.addEventListener('load', function () {
+                    calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0uTsr1zoBzK8WYneThbtcmETaZuAW-ggznmwcguNogCBPHhy86f1q1c0ZzagTydYm28yXLfuMR?gv=true',
+                        color: '#039BE5',
+                        label: 'Programar una cita',
+                        target,
+                    });
+                });
+            })();
+        </script>
+        <!-- end Google Calendar Appointment Scheduling -->
+    </section>
+
+    <footer class="mt-12 pt-8 border-t text-center text-gray-500">
+        <p>&copy; {% now "Y" %} - Marco Richetta</p>
+        <p>
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license"
+                class="underline text-blue-600">
+                This work is licensed under CC BY 4.0
+            </a>
+        </p>
+    </footer>
+</main>
 {% endblock %}
