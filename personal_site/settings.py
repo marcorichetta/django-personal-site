@@ -35,16 +35,15 @@ INSTALLED_APPS = [
     "blog",
     "accounts",
     # 3rd party apps
-    "debug_toolbar",
     "django_extensions",
     "tailwind",
     "theme",
 ]
 
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",  # Must be right after SecurityMiddleware
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -161,10 +160,11 @@ TAILWIND_APP_NAME = "theme"
 
 
 if DEBUG:
-    # Add django_browser_reload only in DEBUG mode
-    INSTALLED_APPS += ["django_browser_reload"]
-
-    # Add django_browser_reload middleware only in DEBUG mode
+    INSTALLED_APPS += [
+        "debug_toolbar",
+        "django_browser_reload",
+    ]
     MIDDLEWARE += [
+        "debug_toolbar.middleware.DebugToolbarMiddleware",
         "django_browser_reload.middleware.BrowserReloadMiddleware",
     ]
