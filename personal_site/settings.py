@@ -15,17 +15,13 @@ SECRET_KEY = os.environ.get("SECRET_KEY", default="django-insecure")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "True").lower() in ("true", "1", "yes")
 
-ALLOWED_HOSTS = []
+# Localhost is required for Coolify health checks
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
-# Railway sets RAILWAY_PUBLIC_DOMAIN for the app's domain
-RAILWAY_PUBLIC_DOMAIN = os.environ.get("RAILWAY_PUBLIC_DOMAIN")
-if RAILWAY_PUBLIC_DOMAIN:
-    ALLOWED_HOSTS.append(RAILWAY_PUBLIC_DOMAIN)
-
-# Also allow custom domain if set
-CUSTOM_DOMAIN = os.environ.get("CUSTOM_DOMAIN")
-if CUSTOM_DOMAIN:
-    ALLOWED_HOSTS.append(CUSTOM_DOMAIN)
+# Add your domain via environment variable
+DOMAIN = os.environ.get("DOMAIN")
+if DOMAIN:
+    ALLOWED_HOSTS.append(DOMAIN)
 
 # Application definition
 
